@@ -47,6 +47,17 @@ HTML;
 }
 
 
+function select( string $name, $value, array $options): string {
+
+  $html_options = [];
+  foreach ($options as $key => $option) {
+    $attributes = $key == $value ? 'selected' : '';
+    $html_options[] = "<option value='$key' $attributes >$option</option>";
+  }
+    return "<select class='form-control' name='$name'>"  . implode($html_options) .  "</select>"; 
+  }
+
+
 function dump ($variable) {
   echo '<pre>';
    var_dump($variable);
@@ -54,10 +65,26 @@ function dump ($variable) {
 }
 
 function creneaux_html(array $creneaux) {
+  if (count($creneaux) ===0 ) {
+    return 'Ferme';
+  }
   $pharses = [];
   foreach($creneaux as $creneau) {
     $pharses[] = "de <strong>{$creneau[0]}h a {$creneau[1]}h </strong>";
   }
-  return implode(' et ', $pharses);
+  return 'Ouvert '. implode(' et ', $pharses);
 
+}
+
+
+function in_creneaux(int $heure, array $creneaux): bool {
+  foreach ($creneaux as $creneau) {
+    $debut =  $creneau[0];
+    $fin = $creneau[1];
+
+    if ($heure >= $debut && $heure <= $fin) {
+      return true;
+    }
+  }
+  return false;
 }
