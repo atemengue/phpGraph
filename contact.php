@@ -1,4 +1,4 @@
-<?php 
+<?php
   $title = 'Nous contacter';
   $nav = 'contact';
   require_once 'config.php';
@@ -16,7 +16,7 @@
 
   $color = $ouvert ? 'green' : 'red';
 
-  require 'header.php'; 
+  require 'elements/header.php'; 
 
 ?>
 
@@ -71,4 +71,4 @@
   </div>
 
 
-<?php require 'footer.php'; ?>
+<?php require 'elements/footer.php'; ?>

@@ -1,7 +1,16 @@
 </main><!-- /.container -->
 
 <div class="row">
-  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <?php 
+      require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' .DIRECTORY_SEPARATOR . 'compteur.php';
+      ajoute_vue() ;
+      $vues = nombre_vues();
+    ?>
+
+      il y'a <?= $vues ?>  visite<?php if ($vues > 1): ?>s<?php endif; ?> sur le site;
+
+  </div>
   <div class="col-md-4"></div>
   <div class="col-md-4">
   <h5>Navigation</h5>  
@@ -17,3 +26,4 @@
 
 </body>
 </html>
+ 

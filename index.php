@@ -1,4 +1,4 @@
-<?php 
+<?php
   $title = "Page d'acceuil";
   $nav = 'index';
   require 'elements/header.php'; 
