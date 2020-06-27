@@ -52,7 +52,7 @@ require_once 'functions.php';
     }
    }
 
-  require 'header.php';
+  require 'elements/header.php';
 ?>
 
 <h2>Composer votre glace</h2>
@@ -128,4 +128,4 @@ require_once 'functions.php';
 </pre>
 
 
-<?php  require 'footer.php' ?>
+<?php  require 'elements/footer.php' ?>

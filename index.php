@@ -1,7 +1,7 @@
 <?php 
   $title = "Page d'acceuil";
   $nav = 'index';
-  require 'header.php'; 
+  require 'elements/header.php'; 
 ?>
 
   <div class="starter-template">
@@ -10,4 +10,4 @@
   </div>
 
 
-<?php require 'footer.php' ?>
+<?php require 'elements/footer.php' ?>

@@ -18,7 +18,7 @@ function nav_item (string $lien, string $name, string $linkClasse = ''):string {
 
     return 
     nav_item('/index.php', 'Acceuil', $linkClasse) .
-    nav_item('/contact.php', 'Contact', $linkClasse) ;
+    nav_item('/contact.php', 'Contact', $linkClasse) .
     nav_item('/jeu.php', 'Jeu', $linkClasse) ;
   }
 
