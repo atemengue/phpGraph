@@ -52,3 +52,12 @@ function dump ($variable) {
    var_dump($variable);
   echo '</pre>';
 }
+
+function creneaux_html(array $creneaux) {
+  $pharses = [];
+  foreach($creneaux as $creneau) {
+    $pharses[] = "de <strong>{$creneau[0]}h a {$creneau[1]}h </strong>";
+  }
+  return implode(' et ', $pharses);
+
+}
