@@ -1,5 +1,8 @@
 <?php 
-  require 'functions/compteur.php';
+
+  require_once 'functions/auth.php';
+  forcer_utilisateur_connecte();
+  require_once 'functions/compteur.php';
   $total = nombre_vues();
   $annee = (int)date('Y');
   $annee_selection =  empty($_GET['annee']) ? null : (int)$_GET['annee']; // ou annee
@@ -27,7 +30,7 @@
     '12' => 'Decembre'
   ];
 
-    require 'elements/header.php' 
+    require_once 'elements/header.php' 
   ?>
 
 <div class="row">

@@ -1,6 +1,9 @@
 <?php 
-
+ if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
   require_once 'functions.php';
+  require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'auth.php';
 
 ?>
 
@@ -52,6 +55,14 @@
     <ul class="navbar-nav mr-auto"> 
     <?= nav_menu('nav-link'); ?>
     </ul>
+    <div class="navbar-nav">
+      <?php if(est_connecte()): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout.php">Se Decconnecter</a>
+            </li>
+
+        <?php endif ?>
+    </div>
   </div>
 </nav>
 
